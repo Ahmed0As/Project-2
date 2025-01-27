@@ -1,0 +1,199 @@
+/* Start Achievements */
+.achieve {
+    position: relative;
+    top: 5rem;
+}
+
+.achieve .container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    gap: 5rem;
+}
+
+.achieve .container .left img {
+    width: 20rem;
+
+}
+
+.achieve .container .right {
+    color: #fff;
+}
+
+.achieve .container .right > p {
+    margin: 1rem 0 2rem;
+    color: #666;
+}
+.achieve .container .right .boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.achieve .container .right .boxes .box {
+    flex: 1;
+    max-width: 15rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+    background-color: var(--color-bg1);
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+
+.achieve .container .right .boxes .box:hover {
+    background-color: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0 , 0 , 0 , .3);
+}
+
+.achieve .container .right .boxes .box i {
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.achieve .container .right .boxes .box:first-of-type i {
+    background-color: var(--color-danger);
+}
+
+.achieve .container .right .boxes .box:nth-child(2) i {
+    background-color: var(--color-success);
+}
+
+.achieve .container .right .boxes .box:last-of-type i {
+    background-color: var(--color-primary);
+}
+
+.achieve .container .right .boxes .box h3 {
+    margin: 1rem 0 .5rem;
+}
+
+.achieve .container .right .boxes .box p {
+    font-size: .9rem;
+}
+
+@media (max-width: 991px) {
+    .achieve .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .achieve .container .left img {
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .achieve .container .right .boxes .box {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .achieve .container .right .boxes {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+/* End Achievements */
+
+/* Start Team */
+.team {
+    background-color: var(--color-bg1);
+    box-shadow: 0 0 3rem inset rgba(0 , 0 , 0 , .5);
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 2rem;
+}
+
+.team .container .box {
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: var(--color-bg2);
+    text-align: center;
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.team .container .box:hover {
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+
+.team .container .box img {
+    height: 17rem;
+    margin: auto;
+    border-radius: 1rem;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.team .container .box:hover img {
+    filter: saturate(1);
+}
+
+.team .container .box h3 {
+    margin: 1rem 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.team .container .box p {
+    font-size: .9rem;
+}
+
+.team .container .box .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: -2rem 0 2rem rgba(0 , 0 , 0 , .3);
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    z-index: 22;
+    transition: var(--transition);
+}
+
+.team .container .box:hover .icons {
+    right: 0;
+}
+
+.team .container .box .icons i {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .team .container {
+        grid-template-columns: repeat(3 , 1fr);
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .team .container {
+        grid-template-columns: repeat(2 , 1fr);
+        text-align: center;
+    }
+
+    .team .container .box {
+        padding: 0 0 1rem;
+    }
+}
+/* End Team */
